@@ -1,6 +1,6 @@
-# keikykuky
+# Hamburguer responsive nav menu
 
-## Bakery Site
+## Skeleton Site
 
 Skeleton part.
 To-Do:
