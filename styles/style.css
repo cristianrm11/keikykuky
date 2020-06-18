@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  background: #b18ed8;
+  height: 90px;
+  width: 100%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 60px;
+  z-index: 1;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #f2f2f2;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 3px;
+  position: relative;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+}
+
+#container div {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#container div#home {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b18ed8), to(#dfc3ec));
+  background-image: linear-gradient(180deg, #b18ed8, #dfc3ec);
+}
+
+#container div#about {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dfc3ec), to(white));
+  background-image: linear-gradient(180deg, #dfc3ec, white);
+}
+
+#container div#gallery {
+  background-image: url("../img/gallery-bck.jpeg") repeat fixed 100%;
+}
+
+#container div#gallery#inner-parallax {
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
+#container div#contact {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#dfc3ec));
+  background-image: linear-gradient(180deg, white, #dfc3ec);
+}
+
+.parallax {
+  background: url("../img/gallery-bck.jpeg") repeat fixed 100%;
+  text-align: center;
+  opacity: 50%;
+}
+
+.parallax-inner {
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
+label.logo {
+  color: #f2f2f2;
+  font-size: 33px;
+  line-height: 80px;
+  padding: 0 140px;
+  font-weight: 600;
+}
+
+label #bar-icon,
+label #times-icon {
+  font-size: 30px;
+  color: #f2f2f2;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ label #bar-icon {
+  display: none;
+}
+
+#check:checked ~ label #times-icon {
+  display: block;
+}
+
+#check:checked ~ ul {
+  left: 0;
+}
+
+a:hover,
+a.active {
+  background: none;
+  color: #e2c7ee;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 950px) {
+  label.logo {
+    font-size: 27px;
+    padding-left: 25px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 870px) {
+  label #bar-icon {
+    display: block;
+    margin-right: 40px;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

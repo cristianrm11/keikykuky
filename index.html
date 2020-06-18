@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check">
+            <i class="fas fa-bars" id="bar-icon"></i>
+            <i class="fas fa-times" id="times-icon"></i>
+          </label>
+          <label class="logo">KeyKy Kuki</label>
+          <ul>
+            <li><a class="active" href="#home">Inicio</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="container">
+      <div id="home"><h1>Inicio</h1></div>
+      <div id="about"><h1>Acerca de</h1></div>
+      <section id="gallery" class="parallax">
+        <div class="parallax-inner">
+          <h1>Postres</h1>
+        </div>
+      </section>
+      <div id="contact"><h1>Contacto</h1></div>
+    </div>
+  </body>
+</html>

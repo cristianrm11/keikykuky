@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+$nav_prim_color: rgb(177, 142, 216);
+$text_prim_color: #f2f2f2;
+
+//---------- Global CSS for the page
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+//----------  Navigation Menu CSS
+nav {
+  background: $nav_prim_color;
+  height: 90px;
+  width: 100%;
+  ul {
+    float: right;
+    margin-right: 60px;
+    z-index: 1;
+
+    li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 10px;
+
+      a {
+        color: $text_prim_color;
+        font-weight: 500;
+        font-size: 20px;
+        border-radius: 3px;
+        position: relative;
+      }
+    }
+  }
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+}
+
+#container div {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &#home {
+    background-image: linear-gradient(
+      180deg,
+      $nav_prim_color,
+      rgb(223, 195, 236)
+    );
+  }
+
+  &#about {
+    background-image: linear-gradient(180deg, rgb(223, 195, 236), white);
+  }
+
+  &#gallery {
+    background-image: url('../img/gallery-bck.jpeg') repeat fixed 100%;
+    &#inner-parallax {
+      padding-top: 30%;
+      padding-bottom: 30%;
+    }
+  }
+
+  &#contact {
+    background-image: linear-gradient(180deg, white, rgb(223, 195, 236));
+  }
+}
+
+.parallax {
+  background: url('../img/gallery-bck.jpeg') repeat fixed 100%;
+  text-align: center;
+  opacity: 50%;
+}
+
+.parallax-inner {
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+
+//---------- Logo CSS
+label.logo {
+  color: $text_prim_color;
+  font-size: 33px;
+  line-height: 80px;
+  padding: 0 140px;
+  font-weight: 600;
+}
+
+//---------- Links Menu CSS
+label #bar-icon,
+label #times-icon {
+  font-size: 30px;
+  color: $text_prim_color;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+
+  &:checked ~ label #bar-icon {
+    display: none;
+  }
+
+  &:checked ~ label #times-icon {
+    display: block;
+  }
+
+  &:checked ~ ul {
+    left: 0;
+  }
+}
+
+a:hover,
+a.active {
+  background: none;
+  color: #e2c7ee;
+  transition: 0.5s;
+}
+
+//---------- Media Queries to adjust Menu
+@media (max-width: 950px) {
+  label.logo {
+    font-size: 27px;
+    padding-left: 25px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 870px) {
+  label #bar-icon {
+    display: block;
+    margin-right: 40px;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+
+    li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}
