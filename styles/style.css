@@ -64,7 +64,7 @@ nav ul li a {
 }
 
 #container div#gallery {
-  background-image: url("../img/gallery-bck.jpeg") repeat fixed 100%;
+  background-image: url("https://placeimg.com/640/480/animals") repeat fixed 100%;
 }
 
 #container div#gallery#inner-parallax {
@@ -78,7 +78,7 @@ nav ul li a {
 }
 
 .parallax {
-  background: url("../img/gallery-bck.jpeg") repeat fixed 100%;
+  background: url("https://placeimg.com/640/480/arch") repeat fixed 100%;
   text-align: center;
   opacity: 50%;
 }
