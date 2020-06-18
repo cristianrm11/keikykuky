@@ -13,5 +13,3 @@ To-Do:
 2. About
 3. Gallery
 4. Contact
-
-- Request more images and the logo, the ones in here have copyrights so can't be used, just are for an idea.
